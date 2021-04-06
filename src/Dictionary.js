@@ -36,6 +36,13 @@ export default function Dictionary() {
         </button>
       </form>
       <Results results={results} />
+      <br />
+
+      <footer>
+        Coded by
+        <a href="https://www.github.com/emllew"> Emily</a>
+        <br />
+      </footer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .searchedWord {
+  margin-top: 100px;
   text-align: center;
   font-size: 3em;
-  color: white;
-  text-shadow: 2px 3px 10px rgba(206, 173, 173, 0.726);
+  color: rgb(255, 255, 255);
 }

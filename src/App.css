@@ -1,8 +1,7 @@
 .App {
-  background-color: #f0f0f0;
-  color: rgb(73, 68, 71);
-  overflow: scroll;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
+  color: rgb(207, 207, 207);
+  display: grid;
+  max-width: 960px;
+  margin: 20px;
+  height: 100vh;
 }
