@@ -1,3 +1,5 @@
 .Meaning {
-  text-align: center;
+  text-align: left;
+  max-height: 1vh;
+  display: inline-block;
 }

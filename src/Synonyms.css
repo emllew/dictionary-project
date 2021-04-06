@@ -1,0 +1,15 @@
+.Synonyms {
+  background-color: white;
+  text-align: center;
+  font-size: 1em;
+  height: 270px;
+  overflow: auto;
+  max-width: 250px;
+  margin: 30px;
+  padding: 15px;
+  display: inline-block;
+}
+
+.listOfSynonyms {
+  padding-top: 10px;
+}
