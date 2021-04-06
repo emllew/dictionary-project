@@ -1,22 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 .Dictionary {
-  background: red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.search {
+.search .input {
   position: relative;
   height: 50px;
-}
-
-.search .input {
   background-color: white;
   border: 0;
   font-size: 18px;
   padding: 15px;
   height: 50px;
-  width: 250px;
+  width: 200px;
   transition: width 0.3s ease;
 }
 
@@ -28,7 +30,6 @@
   position: absolute;
   height: 50px;
   width: 50px;
-  transition: transform 0.3s ease;
 }
 
 .btn:focus,
@@ -36,9 +37,7 @@
   outline: none;
 }
 
-.search.active .input {
-  width: 200px;
-}
-.search.active .btn {
-  transform: translateX(198px);
+.btn:hover {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  color: white;
 }
