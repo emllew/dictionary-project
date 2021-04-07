@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
+body {
+  margin: 30vw;
+}
 form {
   margin: 30px;
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.171);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(4.5px);
+  box-shadow: 20px 20px 50px #d6d6b9, -30px -30px 60px #dcddc8;
   border-radius: 10px;
   position: fixed;
   width: 350px;

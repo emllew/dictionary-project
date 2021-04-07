@@ -1,3 +1,7 @@
 .Photos .img {
   border-radius: 3px;
 }
+
+aside {
+  font-size: small;
+}

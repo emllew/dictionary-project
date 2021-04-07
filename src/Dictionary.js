@@ -3,11 +3,12 @@ import './Dictionary.css';
 import Results from './Results';
 import Photos from './Photos';
 import axios from 'axios';
+import ReactLoading from 'react-loading';
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState('');
   let [results, setResults] = useState(null);
-
+  let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
   function handleDictionaryResponse(response) {
@@ -19,9 +20,11 @@ export default function Dictionary() {
     console.log(response.data);
     setPhotos(response.data.photos);
   }
-
-  function Search(event) {
-    event.preventDefault();
+  function load() {
+    setLoaded(true);
+    search();
+  }
+  function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
 
@@ -39,28 +42,38 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <form className="search" onSubmit={Search}>
-        <input
-          type="search"
-          placeholder="Search the dictionary..."
-          className="input"
-          onChange={handleKeywordChange}
-        />
-        <button className="btn">
-          <i className="fas fa-search"></i>
-        </button>
-      </form>
-      <Results results={results} />
-      <Photos photos={photos} />
-      <br />
-
-      <footer>
-        Coded by
-        <a href="https://www.github.com/emllew"> Emily</a>
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <form className="search" onSubmit={search}>
+          <input
+            type="search"
+            placeholder="Search the dictionary..."
+            className="input"
+            onChange={handleKeywordChange}
+          />
+          <button className="btn">
+            <i className="fas fa-search"></i>
+          </button>
+        </form>
+        <Results results={results} />
+        <Photos photos={photos} />
         <br />
-      </footer>
-    </div>
-  );
+
+        <footer>
+          Coded by
+          <a href="https://www.github.com/emllew"> Emily</a>
+          <br />
+        </footer>
+      </div>
+    );
+  } else {
+    load();
+    <ReactLoading
+      type={'balls'}
+      color={'#975a5e'}
+      height={'20%'}
+      width={'20%'}
+    />;
+  }
 }
