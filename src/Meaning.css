@@ -1,5 +1,8 @@
-.Meaning {
-  text-align: left;
-  max-height: 1vh;
-  display: inline-block;
+.example {
+  font-style: italic;
+  line-height: 3;
+}
+.partOfSpeech {
+  margin-top: 20px;
+  font-weight: bold;
 }

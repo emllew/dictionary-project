@@ -1,7 +1,17 @@
 .App {
   color: #2e2d2d;
   display: grid;
-  max-width: 70vw;
+  max-width: 80vw;
   margin: 0 auto;
   height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(172, 228, 226);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(255, 233, 171);
 }

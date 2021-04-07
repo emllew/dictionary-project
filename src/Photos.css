@@ -1,7 +1,11 @@
-.Photos .img {
+.photos {
   border-radius: 3px;
+  top: 50px;
+  margin: 10px;
+  margin-top: 0px;
+  text-align: center;
 }
 
-aside {
-  font-size: small;
+img {
+  padding: 4px;
 }

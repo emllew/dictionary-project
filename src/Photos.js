@@ -7,21 +7,14 @@ export default function Photos(props) {
         <div className="row">
           {props.photos.map(function (photo, index) {
             return (
-              <>
-                <div className="col-3">
-                  <a href={photo.src.original} target="_blank" rel="noreferrer">
-                    <img
-                      src={photo.src.landscape}
-                      alt={photo.photographer}
-                      key={index}
-                      className="img-fluid"
-                    />
-                  </a>
-                </div>
-                <aside>
-                  Photos by <a href="https://www.pexels.com/">Pixels</a>
-                </aside>
-              </>
+              <a href={photo.src.original} target="_blank" rel="noreferrer">
+                <img
+                  src={photo.src.landscape}
+                  alt={photo.photographer}
+                  key={index}
+                  className="img-fluid"
+                />
+              </a>
             );
           })}
         </div>
