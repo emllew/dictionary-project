@@ -1,8 +1,8 @@
-import React from 'react';
-import './Synonyms.css';
+import React from "react";
+import "./Synonyms.css";
 
 export default function Synonyms(props) {
-  if (props.synonyms) {
+  if (props.synonyms.length > 0) {
     return (
       <div className="Synonyms">
         <h3>Synonyms:</h3>
